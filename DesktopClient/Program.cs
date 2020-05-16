@@ -10,7 +10,7 @@ namespace MonoGameBasicSetupWithNuget.DesktopClient
     {
         static void Main(string[] args)
         {
-            using (var game = new TheMonoGameGodClass()) {
+            using (var game = new DesktopGame()) {
                 game.Run();
             }
         }
