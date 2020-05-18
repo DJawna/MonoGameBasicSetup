@@ -13,6 +13,7 @@ namespace MonoGameBasicSetupWithNuget.DesktopClient
     {
         private readonly GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
+        private Texture2D flower;
         public DesktopGame() {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -41,7 +42,7 @@ namespace MonoGameBasicSetupWithNuget.DesktopClient
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            var flower = Content.Load<Texture2D>("Pics/Blümchen");
+            flower = Content.Load<Texture2D>("Pics/Blümchen");
         }
 
         /// <summary>
@@ -78,6 +79,12 @@ namespace MonoGameBasicSetupWithNuget.DesktopClient
             GraphicsDevice.Clear(Color.Khaki);
 
             // TODO: Add your drawing code here
+
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(flower, new Rectangle(0, 0, 256, 256), Color.White);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
