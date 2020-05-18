@@ -51,6 +51,7 @@ namespace MonoGameBasicSetupWithNuget.DesktopClient
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
